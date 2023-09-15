@@ -1,28 +1,10 @@
-import { Search } from "./Search";
+import { Logo } from "./Logo";
 
-export function Navbar({ numberOfMovies }) {
+export function Navbar({ children }) {
 	return (
 		<nav className="nav-bar">
 			<Logo />
-			<Search />
-			<NumResults numberOfMovies={numberOfMovies} />
+			{children}
 		</nav>
-	);
-}
-
-function Logo() {
-	return (
-		<div className="logo">
-			<span role="img">🍿</span>
-			<h1>usePopcorn</h1>
-		</div>
-	);
-}
-
-function NumResults({ numberOfMovies }) {
-	return (
-		<p className="num-results">
-			Found <strong>{numberOfMovies}</strong> results
-		</p>
 	);
 }
