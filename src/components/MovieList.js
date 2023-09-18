@@ -1,4 +1,4 @@
-export function MovieList({ movies }) {
+export default function MovieList({ movies }) {
 	return (
 		<ul className="list">
 			{movies?.map((movie) => (
@@ -7,6 +7,7 @@ export function MovieList({ movies }) {
 		</ul>
 	);
 }
+
 function Movie({ movie }) {
 	return (
 		<li>

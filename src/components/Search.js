@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function Search() {
+export default function Search() {
 	const [query, setQuery] = useState("");
 
 	return (

@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Navbar } from "./components/Navbar";
-import { Search } from "./components/Search";
-import { NumResults } from "./components/NumResults";
-import { Main } from "./components/Main";
-import { Box } from "./components/Box";
-import { MovieList } from "./components/MovieList";
-import { WatchedList } from "./components/WatchedList";
-import { WatchedSummary } from "./components/WatchedSummary";
+import Navbar from "./components/Navbar";
+import Search from "./components/Search";
+import NumResults from "./components/NumResults";
+import Main from "./components/Main";
+import Box from "./components/Box";
+import MovieList from "./components/MovieList";
+import WatchedList from "./components/WatchedList";
+import WatchedSummary from "./components/WatchedSummary";
 
 const tempMovieData = [
 	{

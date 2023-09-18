@@ -1,4 +1,4 @@
-export function WatchedList({ watched }) {
+export default function WatchedList({ watched }) {
 	return (
 		<ul className="list">
 			{watched.map((movie) => (
@@ -7,6 +7,7 @@ export function WatchedList({ watched }) {
 		</ul>
 	);
 }
+
 function WatchedMovie({ movie }) {
 	return (
 		<li>
