@@ -64,7 +64,7 @@ export default function App() {
 	const [movies, setMovies] = useState([]);
 	const [watched, setWatched] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
-	const [query, setQuery] = useState("inception");
+	const [query, setQuery] = useState("");
 	const [error, setError] = useState("");
 	const [selectedId, setSelectedId] = useState(null);
 
@@ -107,9 +107,8 @@ export default function App() {
 				setMovies(data.Search);
 				setError("");
 			} catch (err) {
-				console.error(err.message);
-
-				if (err.name !== "AbortError") {
+        if (err.name !== "AbortError") {
+          console.log(err.message);
 					setError(err.message);
 				}
 			} finally {
