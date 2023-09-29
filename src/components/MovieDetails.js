@@ -15,7 +15,9 @@ export default function MovieDetails({
 	const [userRating, setUserRating] = useState("");
 
 	const isWatched = watched.map((movie) => movie.imdbID).includes(selectedId);
-  const watchedUserRating = watched.find(movie => movie.imdbID === selectedId)?.userRating
+	const watchedUserRating = watched.find(
+		(movie) => movie.imdbID === selectedId
+	)?.userRating;
 
 	const {
 		Title: title,
@@ -59,6 +61,15 @@ export default function MovieDetails({
 		getMovieDetails();
 	}, [selectedId]);
 
+	useEffect(() => {
+		if (!title) return;
+		document.title = `Movie | ${title}`;
+
+		return () => {
+			document.title = "usePopcorn";
+		};
+	}, [title]);
+
 	return (
 		<div className="details">
 			{isLoading ? (
@@ -100,7 +111,9 @@ export default function MovieDetails({
 								)}
 							</>
 						) : (
-							<p>You rated this movie {watchedUserRating} <span>⭐</span></p>
+							<p>
+								You rated this movie {watchedUserRating} <span>⭐</span>
+							</p>
 						)}
 						<p>
 							<em>{plot}</em>
